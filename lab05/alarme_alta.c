@@ -22,16 +22,22 @@ int main() {                            // este programa deve ser rodado com 'su
    pwmSetRange(506);                    // passos do duty cycle (max=4096)
    pwmSetClock(145);                     // fornece uma frequencia de 10kHz (max=4096)
    printf("Iniciando...\n");
-   for(ciclos = 0; ciclos < 10; ciclos++){  // variando o duty cycle
+   for(ciclos = 1; ciclos <= 10; ciclos++){  // variando o duty cycle
       pwmWrite(pino_PWM0, 506/2);
-      usleep(100000);
+      usleep(150000);
       pwmWrite(pino_PWM0, 0);
-      usleep(100000);
-      pwmWrite(pino_PWM0, 506/2);
-      usleep(100000;
-      pwmWrite(pino_PWM0, 0);
-      usleep(100000);
+      usleep(150000);
+      
+      if (ciclos==3 || ciclos==8){
+         usleep(150000);
+      }
+      if (ciclos==5){
+         usleep(2000000-150000);
+      }
    }
+
+      
+      
    printf("Fim.\n");
    return 0;                            // a saida PWM permanece ligada apos o termino do programa
 }
