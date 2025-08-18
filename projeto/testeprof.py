@@ -26,7 +26,7 @@ for i in range(20):
 
 # programas:
 # 1) prog1: vai comunicar com o Arduino, pegar as medidas e gravar um arquivo .txt
-#  ex lab7: /usr/local/bin/le_pot_spi
+#  ex lab7: /usr/local/bin/le_pot_spi -> prog1 = testeprof_salvandomedicoes.py
 #
 # 2) prog2: vai mostrar a página web:
 #  ex lab7: /usr/lib/cgi-bin/le_pot_spi.cgi, que vai estar em /usr/lib/cgi-bin/
@@ -34,9 +34,9 @@ for i in range(20):
 #
 # 3) prog3: mostra a imagem web:
 #  ex lab7: /usr/lib/cgi-bin/imagem_spi.cgi
-#  - esse programa chama um scrit que lê o txt e cria o gráfico (prog4)
+#  - esse programa chama um scrit (script_grafico) e lê o txt e cria o gráfico (prog4)
 #
-# 4) prog4: lê o txt e cria o gráfico
+# 4) prog4: lê o txt e cria o gráfico -> prog4 = gera_grafico.sh
 # ex lab7: /usr/local/bin/grafico_spi.sh
 #
 # prog1, prog4, prog3, prog2
